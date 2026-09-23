@@ -155,8 +155,6 @@ var I18nObj = {
     }
     this.currentLang = langs[0];
     this.activedObj = LandObj[this.currentLang] || LandObj.en_US;
-    this.renderLangMenu(langs);
-    this.initEvent();
   },
 
   renderLangMenu: function (langs) {

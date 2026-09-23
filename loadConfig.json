@@ -10,9 +10,7 @@ loadConfig({
   },
   "custom_html": {
     "login_options": [
-      "voucher",
-      "fixaccount",
-      "pass"
+      "fixaccount"
     ],
     "lang": [
       "en_US",

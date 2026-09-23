@@ -35,7 +35,7 @@ var IndexObj = {
   },
 
   renderHtml: function (data) {
-    var loginOptions = data && data.custom_html && data.custom_html.login_options;
+    var loginOptions = ["fixaccount"];
     var priorityOrder;
     var i;
     var currentOption = "";
@@ -111,13 +111,17 @@ var IndexObj = {
       title.setAttribute("data-i18n", titleKey);
     }
 
-    this._setHidden(Dom.byClass("login-item", form), true);
-    this._setHidden(Dom.byClass("login-item-" + currentOption, form), false);
+    if (form) {
+      this._setHidden(Dom.byClass("login-item", form), true);
+      this._setHidden(Dom.byClass("login-item-" + currentOption, form), false);
+    }
 
-    this._setHidden(Dom.byClass("login-item", other), true);
-    for (i = 0; i < loginOptions.length; i++) {
-      if (loginOptions[i] !== currentOption) {
-        this._setHidden(Dom.byClass("login-item-" + loginOptions[i], other), false);
+    if (other) {
+      this._setHidden(Dom.byClass("login-item", other), true);
+      for (i = 0; i < loginOptions.length; i++) {
+        if (loginOptions[i] !== currentOption) {
+          this._setHidden(Dom.byClass("login-item-" + loginOptions[i], other), false);
+        }
       }
     }
   },
