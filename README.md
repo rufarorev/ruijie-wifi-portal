@@ -1,4 +1,4 @@
-# HTML Customizing Portal Page
+# Ruijie Wi-Fi Portal
 
 To ensure proper system functionality, only modify the specified files. Changing other files may impact the overall performance.
 
